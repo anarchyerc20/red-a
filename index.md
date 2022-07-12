@@ -1,37 +1,41 @@
-## Welcome to GitHub Pages
+<html>
+<head>
 
-You can use the [editor on GitHub](https://github.com/anarchyerc20/red-a/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<script defer="">
 
-### Markdown
+function copy() {
+  let textarea = document.getElementById("maintext");
+  textarea.select();
+  document.execCommand("copy");
+}
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+function convertToRedA() {
+  var txt = document.getElementById('maintext').value;
+  var newtxt = txt.replaceAll("a","🅰");
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+  var newtxt2 = newtxt.replaceAll("A","🅰");
 
-- Bulleted
-- List
+  document.getElementById('maintext').value = newtxt2;
+}
 
-1. Numbered
-2. List
+</script>
 
-**Bold** and _Italic_ and `Code` text
+</head>
+<body>
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+<div id='container' style='width:600px; border:1px solid black;'>
+    <textarea id="maintext" style='border-style:none none dashed none; border-color:black; width:100%; display:block;box-sizing:border-box;border-width:1px; margin-bottom:1px;'></textarea>
+    <div style='width:100%; box-sizing:border-box; height:35px;padding:5px;'>
+        <button style='float:right' onclick="convertToRedA()">CONVERT TO RED 🅰️s
+        </button>
+        <input type="button" onclick="copy()" value="Copy" />
+    </div>
+</div>
 
-### Jekyll Themes
+</body>
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/anarchyerc20/red-a/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+</html>
