@@ -30,8 +30,9 @@ function convertToRedA() {
 <div id='container' style='width:600px; border:1px solid black;'>
     <textarea id="maintext" style='border-style:none none dashed none; border-color:black; width:100%; display:block;box-sizing:border-box;border-width:1px; margin-bottom:1px;'></textarea>
     <div style='width:100%; box-sizing:border-box; height:35px;padding:5px;'>
-      <a href="" class="btn btn-github" onclick="convertToRedA()">CONVERT TO RED 🅰️s</a>
-      <a href="" class="btn btn-github"  onclick="copy()">Copy</a>
+        <button style='float:right' onclick="convertToRedA()">CONVERT TO RED 🅰️s
+        </button>
+        <input type="button" onclick="copy()" value="Copy" />
     </div>
 </div>
 
